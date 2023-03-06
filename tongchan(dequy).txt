@@ -15,14 +15,14 @@ void xuatMang(int a[], int n){
     }
 }
 
-int tongChan(int a[], int n, int i = 0, int tong = 0){ // for (int i=0; i<n;i++){ if(a[i]%2==0){tong+=a[i];}
+int tongChan(int a[], int n, int i = 0, int tong = 0){ 
     if (i >= n ){
         return tong;
     }
     if(a[i] % 2 == 0){
         tong += a[i];
     }
-    return tongChan(a, n, i + 1, tong);
+    return tongChan(a, n, i+1, tong);
 }
 
 int main()

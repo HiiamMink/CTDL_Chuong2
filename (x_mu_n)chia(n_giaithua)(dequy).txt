@@ -1,0 +1,29 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int giaithua(int n){
+    if (n==1){
+        return 1;
+    }
+    return n*giaithua(n-1);
+}
+
+double tong (int x, int n){
+    if(n==0){
+        return 0;
+    }else{
+        return pow(x,n)/giaithua(n)+tong(x,n-1);
+    }
+}
+int main()
+{
+    int n,x;
+    cout << "nhap x = ";
+    cin>> x;
+    cout << "nhap n = ";
+    cin>> n;
+   // cout << n<<"! = "<<giaithua(n);
+    cout << "S("<<x<<","<<n<<") = "<<tong(x,n);
+    return 0;
+}
